@@ -118,6 +118,18 @@ button:hover{
 #check {
   display: none;
 }
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+
+
+
+
+
 /* Responsive  */
 @media (max-width: 858px) {
   #check-btn {
@@ -150,6 +162,7 @@ button:hover{
   #check:checked ~ ul {
     left: 0;
   }
+  
 }
 /* For screens smaller than 480px */
 @media (max-width: 636px) {
