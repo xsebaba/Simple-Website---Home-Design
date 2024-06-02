@@ -1,0 +1,27 @@
+{
+  "name": "home-decor-website",
+  "version": "1.0.0",
+  "description": " A home decor webpage for the best interior design company",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsebaba/Simple-Website---Home-Design.git"
+  },
+  "keywords": [],
+  "author": "Sebastian Barszowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xsebaba/Simple-Website---Home-Design/issues"
+  },
+  "homepage": "https://github.com/xsebaba/Simple-Website---Home-Design#readme",
+  "dependencies": {
+    "vite": "^5.2.12",
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4"
+  }
+}
