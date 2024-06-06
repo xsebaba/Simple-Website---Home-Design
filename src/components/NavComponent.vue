@@ -15,13 +15,14 @@
               </g>
             </svg>
           </div>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">What is design</a></li>
-            <li><a href="#">Office</a></li>
-            <li><a href="#">Outdoors</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <div class="navlinks">
+            <router-link :to="{ name: 'Home'}">Home</router-link>
+            <router-link :to="{ name:'AboutUs'}">About us</router-link>
+            <router-link :to="{ name:'Contact'}">Contact</router-link>
+            <router-link :to="{ name:'Office'}">Office</router-link>
+            <router-link :to="{ name:'Outdoors'}">Outdoors</router-link>
+            <router-link :to="{ name:'WhatIs'}">What is design</router-link>
+          </div>
         </nav>
 </template>
 <script>
@@ -41,33 +42,36 @@ nav img {
   height: 36px;
   cursor: pointer;
 }
-nav ul {
+.navlinks {
   text-align: right;
   flex: 1;
 }
-nav ul li {
+.navlinks a {
   display: inline-block;
   padding: 6px 15px;
-}
-nav ul li a {
   color: white;
   font-size: 16px;
   padding: 4px;
 }
-nav ul li a:hover {
+.navlinks a:hover {
   color: #f985b5;
-  background-color: rgba(22, 22, 22, 0.1);
 }
-nav ul li a::after {
+
+.navlinks a::after {
   content: "";
   width: 0;
   height: 2px;
   display: block;
-  transition: 0.6s;
+  transition: width 0.6s;
   background-color: #f985b5;
+  
 }
-nav ul li a:hover::after {
+.navlinks a:hover::after {
   width: 100%;
+}
+
+.navlinks a.router-link-exact-active{
+  color:#f985b5;
 }
 
 .svg-container{
@@ -81,10 +85,31 @@ nav ul li a:hover::after {
   object-fit: contain;
 }
 
+#check-btn {
+font-size: 20px;
+color: white;
+float: right;
+flex: 1;
+margin-right: 40px;
+cursor: pointer;
+display: none;
+}
+#check {
+display: none;
+}
+
+.hidden {
+display: none;
+}
+.visible {
+display: block;
+}
+
+
 /* Responsive  */
 @media (max-width: 858px) {
 
-ul {
+.navlinks {
   position: fixed;
   width: 100%;
   height: 82vh;
@@ -98,16 +123,19 @@ ul {
   flex-direction: column;
   transition: 0.5s;
 }
-ul li {
+.navlinks a {
   display: block;
   margin: 30px 0;
   line-height: 30px;
-}
-ul li a {
   color: white;
   font-size: 20px;
 }
-
-
+#check-btn {
+  display: block;
+  color: #ddd;
+}
+#check:checked ~ .navlinks {
+left: 0;
+}
 }
 </style>

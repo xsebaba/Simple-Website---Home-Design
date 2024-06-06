@@ -1,17 +1,19 @@
 <template>
     <div id="app">
       <div class="container">
-        <LandingMain />
+        <NavComponent />
+       
+        <router-view />
       </div>
       
     </div>
 </template>
   
 <script>
-  import LandingMain from './components/LandingMain.vue'
+  import NavComponent from './components/NavComponent.vue'
   export default {
+    components: { NavComponent },
     name: 'App',
-    components: { LandingMain }
   }
 </script>
 
