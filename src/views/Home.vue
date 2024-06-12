@@ -34,5 +34,10 @@ export default {
 
 </script>
 <style>
-
+.hidden {
+display: none;
+}
+.visible {
+display: block;
+}
 </style>

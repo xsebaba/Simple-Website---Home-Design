@@ -1,11 +1,15 @@
-<template>
-  <div>
-    <h1>about us</h1>
-  </div>
+<template>    
+  <div class="head">
+    <h1>
+      About <br />
+      Us!    </h1>
+    <p>Best design for your space and living</p>
+     </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Home'
+name: 'AboutUs',
 }
 </script>
