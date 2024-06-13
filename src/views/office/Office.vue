@@ -4,7 +4,7 @@
       <h1>We will design your office</h1>
     </div>
     <div v-for="office in offices" :key="office.id" class="officedetails">
-      <router-link :to="{name: 'OfficeDetails', params: { id: office.title }}">
+      <router-link :to="{name: 'OfficeDetails', params: { id: office.id }}">
         <h3> {{office.title}}</h3>
       </router-link>
       
@@ -17,13 +17,16 @@ export default {
   name: 'Office',
   data(){
     return {
-      offices: [
-        {title: 'Large Office', id: 1, details: 'Large spaces are allways a chalange for the designers. Our main purpose is to make them reliable and cosy'},
-        {title: 'Small Office', id: 2, details: 'Small spaces are our favourite. Regardles if it is a small open-space, or place for only one employee'},
-        {title: 'Old buildings', id: 3, details: 'We love to change old buildings and bring new lif to the interior'},
-      ]
+      offices: []
     }
-  }
+  },
+  mounted(){
+    fetch('http://localhost:3000/offices')
+      .then((res) => res.json())
+      .then(data => this.offices = data)
+      .catch(err => console.log(err.massage))
+    
+  },
 }
 </script>
 <style scoped>

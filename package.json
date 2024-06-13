@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/xsebaba/Simple-Website---Home-Design#readme",
   "dependencies": {
+    "json-server": "^1.0.0-beta.1",
     "vite": "^5.2.12",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
